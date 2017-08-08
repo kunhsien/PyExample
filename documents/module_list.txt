@@ -1,0 +1,23 @@
+python -m pip 可以查看模組    pip模組介紹  pip套件官網(取代easy_install的python套件安裝神器)
+python -m pip install -U pip 可以更新pip模組
+python -m pip install -U pyserial 可以安裝pyserial模組，並更新到最新版本
+python -m pip install -U pyvisa 可以安裝pyvisa模組，並更新到最新版本   pyvisa官網
+python -m pip install -U junit-xml 可以安裝junit-xml模組
+python -m pip install -U pytest 可以安裝pytest模組
+python -m pip install -U openpyxl //Exel專用模組
+python -m pip install -U pillow //圖形處理專用模組
+python -m pip install -U PyQt5 //Python下的UI開發
+python -m pip install -U bs4 //Python下的網路爬蟲專用模組
+python -m pip install -U Matplotlib //Python下的繪圖庫模組 常用來產生報表
+python -m pip install -U PyPDF2 //PDF專用模組
+python -m pip install -U xlsxwriter //Excel寫入專用模組
+python -m pip install -U Python-Docx //Word專用模組
+python -m pip install -U subprocess //工作排成與程式啟動專用模組
+python -m pip install -U pyautogui   //自動化GUI操作模組
+python -m pip install -U paho-mqtt
+
+pip更新模組指令 : python -m pip install --upgrade pip (更新pip模組) 
+
+
+opencv for python3 => http://www.lfd.uci.edu/~gohlke/pythonlibs/
+video guide : https://www.youtube.com/watch?v=ulJdZn0qBCQ
