@@ -24,3 +24,18 @@ try:
 except Exception as e:
     print(str(e));
 
+#Sample 2 Reference : https://buzzorange.com/techorange/2017/08/04/python-scraping/
+quote_page = 'http://www.bloomberg.com/quote/SPX:IND'
+page = urllib.request.urlopen(quote_page)
+soup = BeautifulSoup(page, 'html.parser')
+name_box = soup.find('h1', attrs={'class': 'name'})
+name = name_box.text.strip()
+print(str(name))
+# strip() 函數用於去除前後空格
+price_box = soup.find('div', attrs={'class': 'price'})
+price = price_box.text
+print(str(price))
+
+
+#Scraping for Facebook Reference : http://bhan0507.logdown.com/posts/1406669-python-facebook-api-comments
+
