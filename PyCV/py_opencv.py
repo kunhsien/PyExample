@@ -50,3 +50,37 @@ cv2.imwrite(my_video_name+'_frame_'+str(frame_seq)+'.jpg',gray)
 # When everything done, release the capture
 cap.release()
 cv2.destroyAllWindows()
+
+
+
+#Displaying a webcam feed using OpenCV and Python
+#https://stackoverflow.com/questions/2601194/displaying-a-webcam-feed-using-opencv-and-python
+
+#How do I access my webcam in Python?
+#https://stackoverflow.com/questions/604749/how-do-i-access-my-webcam-in-python
+
+#OPENCV Python 使用webcam錄影 http://opencv123.blogspot.tw/2015/07/opencv-python-webcam.html
+
+#Open Webcam using OpenCV on Python https://ccw1986.blogspot.tw/2015/07/opencvpython-open-webcam-using-opencv.html
+
+#OpenCV/Python: read specific frame using VideoCapture
+#https://stackoverflow.com/questions/33650974/opencv-python-read-specific-frame-using-videocapture?newreg=2495db9d80934aa3b199f6d8d7489f89
+
+#Install OpenCV 3 with Python 3 on Windows
+#https://www.solarianprogrammer.com/2016/09/17/install-opencv-3-with-python-3-on-windows/
+
+cv2.namedWindow("preview")
+vc = cv2.VideoCapture(0)
+
+if vc.isOpened(): # try to get the first frame
+    rval, frame = vc.read()
+else:
+    rval = False
+
+while rval:
+    cv2.imshow("preview", frame)
+    rval, frame = vc.read()
+    key = cv2.waitKey(20)
+    if key == 27: # exit on ESC
+        break
+cv2.destroyWindow("preview")
